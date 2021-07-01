@@ -5,6 +5,7 @@ const controllers = require("./controllers");
 const dbConnection = require("./db");
 
 app.use(Express.json());
+app.use(require('./middleware/headers'));
 
 app.use("/log", controllers.logController);
 app.use("/user", controllers.userController);
